@@ -25,20 +25,59 @@ Execute the C Program for the desired output.
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
-int main()
-{
-char block[1024];
-int in, out;
-int nread;
-in = open("filecopy.c", O_RDONLY);
-out = open("file.out", O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
-while((nread = read(in,block,sizeof(block))) > 0)
-write(out,block,nread);
-exit(0);}
+#include <stdio.h> // Include for debugging
+
+int main() {
+    char block[1024];
+    int in, out;
+    int nread;
+
+    // Open input file
+    in = open("filecopy.c", O_RDONLY);
+    if (in == -1) {
+        perror("Error opening input file");
+        exit(1);
+    }
+    printf("Input file opened successfully\n");
+
+    // Open or create output file
+    out = open("file.out", O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
+    if (out == -1) {
+        perror("Error opening/creating output file");
+        exit(1);
+    }
+    printf("Output file opened/created successfully\n");
+
+    // Read from input file and write to output file
+    while ((nread = read(in, block, sizeof(block))) > 0) {
+        printf("Read %d bytes from input file\n", nread);
+        if (write(out, block, nread) != nread) {
+            perror("Error writing to output file");
+            exit(1);
+        }
+        printf("Wrote %d bytes to output file\n", nread);
+    }
+
+    if (nread == -1) {
+        perror("Error reading from input file");
+        exit(1);
+    }
+
+    printf("End of input file\n");
+
+    // Close files
+    close(in);
+    close(out);
+
+    printf("Files closed successfully\n");
+
+    exit(0);
+}
 ```
 ## OUTPUT
 ```
--rwxr-xr-x    1 root     root         18348 Apr 17 14:14 file.o
+![WhatsApp Image 2024-05-08 at 15 12 04_49f456e6](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/5a748697-dcc3-43ae-aa0c-d785b6683cc8)
+
 ```
 
 
@@ -87,7 +126,8 @@ return 0;
 
 ## OUTPUT
 ```
--rwxr-xr-x    1 root     root         18376 Apr 17 14:20 text.o
+![WhatsApp Image 2024-05-08 at 15 12 04_07d1cc8b](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/03c93950-d00f-4e7a-9294-b84bbc59431b)
+
 ```
 
 

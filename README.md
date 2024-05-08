@@ -75,10 +75,10 @@ int main() {
 }
 ```
 ## OUTPUT
-```
+
 ![WhatsApp Image 2024-05-08 at 15 12 04_9936dd1d](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/9c49d644-cec5-49c0-a172-67e2a9e9d269)
 
-```
+
 
 
 ## 2.To Write a C program that illustrates files locking
@@ -125,10 +125,10 @@ return 0;
 
 
 ## OUTPUT
-```
+
 ![WhatsApp Image 2024-05-08 at 15 12 04_369c198e](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/3caded28-cfbf-46b3-a1ae-14afb50a4ef0)
 
-```
+
 
 
 

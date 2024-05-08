@@ -76,7 +76,7 @@ int main() {
 ```
 ## OUTPUT
 ```
-![WhatsApp Image 2024-05-08 at 15 12 04_49f456e6](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/5a748697-dcc3-43ae-aa0c-d785b6683cc8)
+![WhatsApp Image 2024-05-08 at 15 12 04_9936dd1d](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/9c49d644-cec5-49c0-a172-67e2a9e9d269)
 
 ```
 
@@ -126,7 +126,7 @@ return 0;
 
 ## OUTPUT
 ```
-![WhatsApp Image 2024-05-08 at 15 12 04_07d1cc8b](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/03c93950-d00f-4e7a-9294-b84bbc59431b)
+![WhatsApp Image 2024-05-08 at 15 12 04_369c198e](https://github.com/jagadeesh9500/Linux-File-IO-Systems-locking/assets/149087921/3caded28-cfbf-46b3-a1ae-14afb50a4ef0)
 
 ```
 
